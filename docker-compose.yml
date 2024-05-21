@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  epay:
+    image: php-apache-cassandra
+    container_name: epaynew
+    restart: unless-stopped
+    ports:
+      - "8200:80"
+    volumes:
+      - .:/var/www/html
